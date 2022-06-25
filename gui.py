@@ -1,5 +1,5 @@
 """
-
+This is the main program which initialize the main window and catch events.
 
 """
 import PySimpleGUI as Sg
