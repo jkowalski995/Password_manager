@@ -1,9 +1,11 @@
+#TODO! Cipher again
 """
 This file consist functions used by main program.
 
 """
 import os
 import PySimpleGUI as Sg
+import rsa
 
 
 def save_file(dirr, name, login, pwd):
@@ -37,8 +39,15 @@ def open_file():
     """
     # Open file
     file_path = Sg.popup_get_file('Select password file')
-    x = open(file_path, 'r')
-    log_pwd = x.readline().split()
+    try:
+        x = open(file_path, 'r')
+        log_pwd = x.readline().split()
 
-    # Create popup with login and password
-    Sg.popup(f"Your login is: {log_pwd[0]} \nand password is: {log_pwd[1]}", title="Open file", line_width=300)
+        # Create popup with login and password
+        Sg.popup(f"Your login is: {log_pwd[0]} \nand password is: {log_pwd[1]}", title="Open file", line_width=300)
+
+    except (TypeError, FileNotFoundError):
+        pass
+
+
+
