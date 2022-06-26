@@ -1,4 +1,3 @@
-#TODO! Cipher again
 """
 This file consist functions used by main program.
 
