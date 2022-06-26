@@ -4,7 +4,6 @@ This file consist functions used by main program.
 """
 import os
 import PySimpleGUI as Sg
-import rsa
 
 
 def save_file(dirr, name, login, pwd):
